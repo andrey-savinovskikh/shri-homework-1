@@ -1,0 +1,13 @@
+node_modules
+
+db/**/*
+!db/.gitkeep
+!db/images
+
+db/images/*
+!db/images/.gitkeep
+
+tmp/*
+!tmp/.gitkeep
+
+.DS_Store
