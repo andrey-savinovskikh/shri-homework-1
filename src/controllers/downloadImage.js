@@ -1,6 +1,6 @@
 const db = require('../entities/Database');
 const { BadRequestApiError, NotFoundApiError } = require('../errors/ApiError');
-const { imageFolder } = require('../config');
+const { imagesFolder } = require('../config');
 
 module.exports = async (req, res, next) => {
   try {
@@ -16,7 +16,7 @@ module.exports = async (req, res, next) => {
       throw new NotFoundApiError('Image doesn\'t exist');
     }
 
-    res.download(`${imageFolder}/${file.filename}`);
+    res.download(`${imagesFolder}/${file.filename}`);
   } catch (err) {
     return next(err);
   }
